@@ -70,7 +70,7 @@ public class ConversationDialog extends Window implements Constants {
             @Override
             public void keyTyped(TextField tf, char key) {
 
-                if (key == '\r') {
+                if (key == '\r' || key == '\n') {
 
                     if (tf.getText().length() == 0) {
                         if (!cancelHide) {

@@ -7,8 +7,8 @@ import util.LogDisplay;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
-import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Batch;
@@ -81,12 +81,13 @@ public class Exodus extends Game {
 
     public static void main(String[] args) {
 
-        LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
-        cfg.title = "Ultima 3 - Exodus";
-        cfg.width = SCREEN_WIDTH;
-        cfg.height = SCREEN_HEIGHT;
-        cfg.addIcon("assets/graphics/exodus.png", Files.FileType.Classpath);
-        new LwjglApplication(new Exodus(), cfg);
+        Lwjgl3ApplicationConfiguration cfg = new Lwjgl3ApplicationConfiguration();
+        cfg.setTitle("Ultima 3 - Exodus");
+        cfg.setWindowedMode(SCREEN_WIDTH, SCREEN_HEIGHT);
+        //cfg.width = SCREEN_WIDTH;
+        //cfg.height = SCREEN_HEIGHT;
+        //cfg.addIcon("assets/graphics/exodus.png", Files.FileType.Classpath);
+        new Lwjgl3Application(new Exodus(), cfg);
 
     }
 
