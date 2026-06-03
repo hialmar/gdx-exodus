@@ -1,6 +1,6 @@
 
 import com.badlogic.gdx.ApplicationListener;
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import java.io.File;
 import java.util.List;
 import objects.BaseMap;
@@ -27,7 +27,7 @@ public class WorldTMXConvert implements ApplicationListener {
     public final int LAVA = 67 + 1;
 
     public static void main(String[] args) throws Exception {
-        new LwjglApplication(new WorldTMXConvert());
+        new Lwjgl3Application(new WorldTMXConvert());
     }
 
     @Override

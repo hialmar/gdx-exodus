@@ -1,6 +1,6 @@
 
 import com.badlogic.gdx.ApplicationListener;
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import java.io.File;
 
 import javax.xml.bind.JAXBContext;
@@ -31,7 +31,7 @@ public class UltIsometricTmxConvert implements ApplicationListener {
 
     public static void main(String[] args) throws Exception {
 
-        new LwjglApplication(new UltIsometricTmxConvert());
+        new Lwjgl3Application(new UltIsometricTmxConvert());
     }
 
     @Override

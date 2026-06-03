@@ -1,6 +1,6 @@
 
 import com.badlogic.gdx.ApplicationListener;
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import objects.BaseMap;
 import org.apache.commons.io.IOUtils;
 import java.io.FileInputStream;
@@ -37,7 +37,7 @@ public class ConvertToWizDungeon implements ApplicationListener {
 
     public static void main(String[] args) throws Exception {
 
-        new LwjglApplication(new ConvertToWizDungeon());
+        new Lwjgl3Application(new ConvertToWizDungeon());
     }
 
     @Override

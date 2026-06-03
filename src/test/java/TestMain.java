@@ -1,8 +1,8 @@
 
 import objects.SaveGame;
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
-import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Batch;
@@ -29,11 +29,10 @@ public class TestMain extends Game {
     Batch batch2;
 
     public static void main(String[] args) {
-        LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
-        cfg.title = "test";
-        cfg.width = 1024;
-        cfg.height = 768;
-        new LwjglApplication(new TestMain(), cfg);
+        Lwjgl3ApplicationConfiguration cfg = new Lwjgl3ApplicationConfiguration();
+        cfg.setTitle("test");
+        cfg.setWindowedMode(1024, 768);
+        new Lwjgl3Application(new TestMain(), cfg);
     }
 
     @Override

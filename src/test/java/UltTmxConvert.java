@@ -1,7 +1,7 @@
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import java.io.File;
 
 import javax.xml.bind.JAXBContext;
@@ -35,7 +35,7 @@ public class UltTmxConvert implements ApplicationListener {
 
     public static void main(String[] args) throws Exception {
 
-        new LwjglApplication(new UltTmxConvert());
+        new Lwjgl3Application(new UltTmxConvert());
     }
 
     @Override
