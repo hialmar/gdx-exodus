@@ -133,7 +133,7 @@ public class Sosaria extends Game {
         Gdx.gl.glClearColor(0, 0, 0, 0);
         Gdx.gl.glClear(GL30.GL_COLOR_BUFFER_BIT | GL30.GL_DEPTH_BUFFER_BIT);
 
-        Gdx.gl.glViewport(32, 64, Exodus.MAP_WIDTH, Exodus.MAP_HEIGHT);
+        Gdx.gl.glViewport(32, 64, 1024*2, 768*2); // Exodus.MAP_WIDTH*2, Exodus.MAP_HEIGHT*2);
 
         camera.update();
 

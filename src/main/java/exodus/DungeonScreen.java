@@ -444,7 +444,9 @@ public class DungeonScreen extends BaseScreen {
         ((ColorAttribute) pLight.material.get(ColorAttribute.Diffuse)).color.set(fixedLight.color);
         pLight.worldTransform.setTranslation(fixedLight.position);
 
-        Gdx.gl.glViewport(32, 64, Exodus.MAP_WIDTH, Exodus.MAP_HEIGHT);
+        // Gdx.gl.glViewport(32, 64, Exodus.MAP_WIDTH, Exodus.MAP_HEIGHT);
+
+        Gdx.gl.glViewport(0, 0, Gdx.graphics.getBackBufferWidth(), Gdx.graphics.getBackBufferHeight());
 
         camera.update();
 
@@ -472,7 +474,8 @@ public class DungeonScreen extends BaseScreen {
         }
         decalBatch.flush();
 
-        Gdx.gl.glViewport(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+        // Gdx.gl.glViewport(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+        Gdx.gl.glViewport(0, 0, Gdx.graphics.getBackBufferWidth(), Gdx.graphics.getBackBufferHeight());
 
         batch.begin();
         batch.draw(Exodus.backGround, 0, 0);

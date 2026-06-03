@@ -845,12 +845,13 @@ public class GameScreen extends BaseScreen {
         tmt.setId(y * context.getCurrentMap().getWidth() + x);
         if (cell == null) {
             System.err.printf("null cell in %s %d %d %s\n", context.getCurrentMap().getId(), x, y, name);
-        }
-        try {
-            cell.setTile(tmt);
-            context.getCurrentMap().setTile(Exodus.baseTileSet.getTileByName(name), x, y);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } else {
+            try {
+                cell.setTile(tmt);
+                context.getCurrentMap().setTile(Exodus.baseTileSet.getTileByName(name), x, y);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
